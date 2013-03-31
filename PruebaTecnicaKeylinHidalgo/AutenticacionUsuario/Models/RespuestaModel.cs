@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutenticacionUsuarioCommon;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -21,7 +22,7 @@ namespace AutenticacionUsuario.Models
         /// <param name="correcto">Indica si la transacción fue exitosa.</param>
         /// <param name="resultado">Mensaje de error, en caso que la transacción fallara.</param>
         /// <param name="perfil">Perfil del usuario, en caso que la transacción sea exitosa.</param>
-        public RespuestaModel(bool correcto, string resultado, PerfilModel perfil)
+        public RespuestaModel(bool correcto, string resultado, Perfil perfil)
         {
             this.correcto = correcto;
             this.resultado = resultado;
@@ -31,6 +32,6 @@ namespace AutenticacionUsuario.Models
         //Atributos de la clase
         public bool correcto { get; set; }
         public string resultado { get; set; }
-        public PerfilModel perfil { get; set; }
+        public Perfil perfil { get; set; }
     }
 }

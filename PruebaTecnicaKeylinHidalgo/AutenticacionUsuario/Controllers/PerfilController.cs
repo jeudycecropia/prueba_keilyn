@@ -1,4 +1,5 @@
 ﻿using AutenticacionUsuario.Models;
+using AutenticacionUsuarioCommon;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace AutenticacionUsuario.Controllers
             if (!string.IsNullOrEmpty(tokenSesion) & token.Equals(tokenSesion))
             {
                 //Se retorna el perfil de la sesión
-                return new RespuestaModel { correcto = true, perfil = (PerfilModel)HttpContext.Current.Session["perfil"] };
+                return new RespuestaModel { correcto = true, perfil = (Perfil)HttpContext.Current.Session["perfil"] };
             }
             else
             {

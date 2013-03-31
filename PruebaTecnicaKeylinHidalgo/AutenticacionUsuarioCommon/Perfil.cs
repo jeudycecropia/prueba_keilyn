@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace AutenticacionUsuario.Models
+namespace AutenticacionUsuarioCommon
 {
     /// <summary>
-    /// Modelo con los atributos del perfil
+    /// Clase con los atributos del perfil
     /// </summary>
-    public class PerfilModel
+    public class Perfil
     {
         /// <summary>
         /// Constructor default
         /// </summary>
-        public PerfilModel(){}
+        public Perfil(){}
 
         /// <summary>
         /// Constructor con los atributos del perfil
@@ -23,7 +24,7 @@ namespace AutenticacionUsuario.Models
         /// <param name="sEmail">Email del usuario</param>
         /// <param name="sDireccion">Dirección del usuario</param>
         /// <param name="sTelefono">Teléfono del usuario</param>
-        public PerfilModel(string sNombre, string sApellidos, string sEmail, string sDireccion, string sTelefono)
+        public Perfil(string sNombre, string sApellidos, string sEmail, string sDireccion, string sTelefono)
         {
             this.sNombre = sNombre;
             this.sApellidos = sApellidos;

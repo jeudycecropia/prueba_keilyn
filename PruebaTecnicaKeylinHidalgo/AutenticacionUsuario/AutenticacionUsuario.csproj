@@ -130,7 +130,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\RespuestaModel.cs" />
-    <Compile Include="Models\PerfilModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -245,6 +244,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutenticacionUsuarioBL\AutenticacionUsuarioBL.csproj">
+      <Project>{86ab7183-d7c7-4bfc-a6e5-3b1905bcc010}</Project>
+      <Name>AutenticacionUsuarioBL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AutenticacionUsuarioCommon\AutenticacionUsuarioCommon.csproj">
+      <Project>{60455908-d7a4-4aaa-9d72-8ff27497c673}</Project>
+      <Name>AutenticacionUsuarioCommon</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

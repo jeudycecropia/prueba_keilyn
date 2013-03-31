@@ -1,0 +1,16 @@
+C:\Users\Sergio\Documents\GitHub\prueba_keilyn\PruebaTecnicaKeylinHidalgo\AutenticacionUsuarioDAL\obj\Debug\AutenticacionUsuarioDAL.csprojResolveAssemblyReference.cache
+C:\Users\Sergio\Documents\GitHub\prueba_keilyn\PruebaTecnicaKeylinHidalgo\AutenticacionUsuarioDAL\bin\Debug\AutenticacionUsuarioDAL.dll
+C:\Users\Sergio\Documents\GitHub\prueba_keilyn\PruebaTecnicaKeylinHidalgo\AutenticacionUsuarioDAL\bin\Debug\AutenticacionUsuarioDAL.pdb
+C:\Users\Sergio\Documents\GitHub\prueba_keilyn\PruebaTecnicaKeylinHidalgo\AutenticacionUsuarioDAL\bin\Debug\AutenticacionUsuarioCommon.dll
+C:\Users\Sergio\Documents\GitHub\prueba_keilyn\PruebaTecnicaKeylinHidalgo\AutenticacionUsuarioDAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Sergio\Documents\GitHub\prueba_keilyn\PruebaTecnicaKeylinHidalgo\AutenticacionUsuarioDAL\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\Sergio\Documents\GitHub\prueba_keilyn\PruebaTecnicaKeylinHidalgo\AutenticacionUsuarioDAL\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Sergio\Documents\GitHub\prueba_keilyn\PruebaTecnicaKeylinHidalgo\AutenticacionUsuarioDAL\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\Users\Sergio\Documents\GitHub\prueba_keilyn\PruebaTecnicaKeylinHidalgo\AutenticacionUsuarioDAL\bin\Debug\AutenticacionUsuarioCommon.pdb
+C:\Users\Sergio\Documents\GitHub\prueba_keilyn\PruebaTecnicaKeylinHidalgo\AutenticacionUsuarioDAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.pdb
+C:\Users\Sergio\Documents\GitHub\prueba_keilyn\PruebaTecnicaKeylinHidalgo\AutenticacionUsuarioDAL\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\Users\Sergio\Documents\GitHub\prueba_keilyn\PruebaTecnicaKeylinHidalgo\AutenticacionUsuarioDAL\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\Sergio\Documents\GitHub\prueba_keilyn\PruebaTecnicaKeylinHidalgo\AutenticacionUsuarioDAL\bin\Debug\Microsoft.Practices.Unity.pdb
+C:\Users\Sergio\Documents\GitHub\prueba_keilyn\PruebaTecnicaKeylinHidalgo\AutenticacionUsuarioDAL\bin\Debug\Microsoft.Practices.Unity.Interception.pdb
+C:\Users\Sergio\Documents\GitHub\prueba_keilyn\PruebaTecnicaKeylinHidalgo\AutenticacionUsuarioDAL\obj\Debug\AutenticacionUsuarioDAL.dll
+C:\Users\Sergio\Documents\GitHub\prueba_keilyn\PruebaTecnicaKeylinHidalgo\AutenticacionUsuarioDAL\obj\Debug\AutenticacionUsuarioDAL.pdb

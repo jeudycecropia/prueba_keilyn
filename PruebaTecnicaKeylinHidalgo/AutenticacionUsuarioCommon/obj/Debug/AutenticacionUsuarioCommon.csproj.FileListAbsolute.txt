@@ -1,0 +1,5 @@
+C:\Users\Sergio\Documents\GitHub\prueba_keilyn\PruebaTecnicaKeylinHidalgo\AutenticacionUsuarioCommon\obj\Debug\AutenticacionUsuarioCommon.csprojResolveAssemblyReference.cache
+C:\Users\Sergio\Documents\GitHub\prueba_keilyn\PruebaTecnicaKeylinHidalgo\AutenticacionUsuarioCommon\bin\Debug\AutenticacionUsuarioCommon.dll
+C:\Users\Sergio\Documents\GitHub\prueba_keilyn\PruebaTecnicaKeylinHidalgo\AutenticacionUsuarioCommon\bin\Debug\AutenticacionUsuarioCommon.pdb
+C:\Users\Sergio\Documents\GitHub\prueba_keilyn\PruebaTecnicaKeylinHidalgo\AutenticacionUsuarioCommon\obj\Debug\AutenticacionUsuarioCommon.dll
+C:\Users\Sergio\Documents\GitHub\prueba_keilyn\PruebaTecnicaKeylinHidalgo\AutenticacionUsuarioCommon\obj\Debug\AutenticacionUsuarioCommon.pdb

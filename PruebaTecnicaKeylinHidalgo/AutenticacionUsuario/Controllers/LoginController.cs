@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Http;
 using Newtonsoft.Json;
 using System.Web.Mvc;
+using AutenticacionUsuarioCommon;
+using AutenticacionUsuarioBL;
 
 namespace AutenticacionUsuario.Controllers
 {
@@ -16,73 +18,37 @@ namespace AutenticacionUsuario.Controllers
     /// </summary>
     public class LoginController : ApiController
     {
-        PerfilModel[] perfilesModel = new PerfilModel[]
-        {
-            new PerfilModel
-            {
-                sId = "k",
-                sPassword = "1",
-                sNombre = "Keylin",
-                sApellidos = "Hidalgo Barrios",
-                sEmail = "keylin@gmail.com",
-                sDireccion = "Cartago",
-                sTelefono = "8877665544"
-            },
-            new PerfilModel
-            {
-                sId = "lblanco",
-                sPassword = "abcdef",
-                sNombre = "Lorenzo",
-                sApellidos = "Blanco Fonseca",
-                sEmail = "lorenzo@gmail.com",
-                sDireccion = "San Jose",
-                sTelefono = "22274567"
-            }
-        }; 
-
         [System.Web.Http.HttpPost]
         /// <summary>
         /// Método post para el login del usuario
         /// </summary>
         /// <param name="login">Credenciales del usuario</param>
         /// <returns>Token si la transacción es correcta, en su defecto retorna mensaje de error.</returns>
-        public RespuestaModel PostLogin(PerfilModel login)
+        public RespuestaModel PostLogin(Perfil login)
         {
-            //Usuarios con el id igual al solicitado
-            var perfilUsuario = perfilesModel.FirstOrDefault((p) => p.sId == login.sId);
+            //Consulta a base de datos para obtener el perfil solicitado
+            Perfil perfilUsuario = new PerfilBL().ConsultarPerfil(login.sId, login.sPassword);
+
             //Se llama a la sesión
             var session = HttpContext.Current.Session;
 
             //Si no hay usuarios con ese id
-            if (perfilUsuario == null)
+            if (perfilUsuario == null || string.IsNullOrEmpty(perfilUsuario.sNombre))
             {
                 //Retornar mensaje de error
                 return new RespuestaModel { correcto = false, resultado = "Usuario no existe" };
             }
             else
             {
-                //Usuarios filtrados previamente por el id, ahora se filtran por el password
-                PerfilModel[] perfilesFiltradosUsuario = new PerfilModel[] { (PerfilModel)perfilUsuario };
-                var perfilFiltradoUsuario = perfilesFiltradosUsuario.FirstOrDefault((p) => p.sPassword == login.sPassword);
+                //Se genera un token para el usuario
+                string tokenGenerado = new Random().Next(1, 999999999).ToString() + RandomString(4);
 
-                //Si no hay usuarios con ese password
-                if (perfilFiltradoUsuario == null)
-                {
-                    //Retornar mensaje de error
-                    return new RespuestaModel { correcto = false, resultado = "Password incorrecto" };
-                }
-                else
-                {
-                    //Se genera un token para el usuario
-                    string tokenGenerado = new Random().Next(1, 999999999).ToString() + RandomString(4);
+                //Se sube a sesión lo necesario para autenticar al usuario
+                session["perfil"] = perfilUsuario;
+                session["token"] = tokenGenerado;
 
-                    //Se sube a sesión lo necesario para autenticar al usuario
-                    session["perfil"] = perfilFiltradoUsuario;
-                    session["token"] = tokenGenerado;
-
-                    //Se retorna el token
-                    return new RespuestaModel { correcto = true, resultado = tokenGenerado };
-                }
+                //Se retorna el token
+                return new RespuestaModel { correcto = true, resultado = tokenGenerado };
             }
         }
 
