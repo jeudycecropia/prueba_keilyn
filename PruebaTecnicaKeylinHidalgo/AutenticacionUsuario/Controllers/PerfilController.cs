@@ -11,17 +11,17 @@ namespace AutenticacionUsuario.Controllers
 {
     public class PerfilController : ApiController
     {
-        public Object GetPerfil(string token)
+        public RespuestaModel GetPerfil(string token)
         {
             string tokenSesion = HttpContext.Current.Session["token"].ToString();
 
             if (!string.IsNullOrEmpty(tokenSesion) & token.Equals(tokenSesion))
             {
-                return (PerfilModel)HttpContext.Current.Session["perfil"];
+                return new RespuestaModel { correcto = true, perfil = (PerfilModel)HttpContext.Current.Session["perfil"] };
             }
             else
             {
-                return new RespuestaModel { resultado = false, mensaje = "Token inválido" };
+                return new RespuestaModel { correcto = false, resultado = "Token inválido" };
             }
         }
     }

@@ -38,19 +38,19 @@ namespace AutenticacionUsuario.Controllers
             }
         }; 
 
-        //[HttpPost]
         public RespuestaModel PostLogin(LoginModel login)
         {
-            //string id = "khidalgo"; 
+            //TODO: borrar comentarios
+            //string id = "akhidalgo";
             //string password = "123abc";
+
             //Match id
             var perfilUsuario = perfilesModel.FirstOrDefault((p) => p.sId == login.sId);
             var session = HttpContext.Current.Session;
 
-            RespuestaModel respuesta;
             if (perfilUsuario == null)
             {
-                respuesta = new RespuestaModel { resultado = false, mensaje = "Usuario no existe" };
+                return new RespuestaModel { correcto = false, resultado = "Usuario no existe" };
             }
             else
             {
@@ -61,21 +61,19 @@ namespace AutenticacionUsuario.Controllers
 
                 if (perfilFiltradoUsuario == null)
                 {
-                    respuesta = new RespuestaModel { resultado = false, mensaje = "Password incorrecto" };
+                    return new RespuestaModel { correcto = false, resultado = "Password incorrecto" };
                 }
                 else
                 {
                     string tokenGenerado = new Random().Next(1, 999999999).ToString() + RandomString(4);
 
-                    ////Se sube a sesión lo necesario para autenticar al usuario
-                    //session["perfil"] = perfilFiltradoUsuario;
-                    //session["token"] = tokenGenerado;
+                    //Se sube a sesión lo necesario para autenticar al usuario
+                    session["perfil"] = perfilFiltradoUsuario;
+                    session["token"] = tokenGenerado;
 
-                    respuesta = new RespuestaModel { resultado = true, token = tokenGenerado };
+                    return new RespuestaModel { correcto = true, resultado = tokenGenerado };
                 }
             }
-
-            return respuesta;
         }
 
         private static string RandomString(int size)

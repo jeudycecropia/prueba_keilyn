@@ -7,8 +7,17 @@ namespace AutenticacionUsuario.Models
 {
     public class RespuestaModel
     {
-        public bool resultado { get; set; }
-        public string mensaje { get; set; }
-        public string token { get; set; }
+        public RespuestaModel(){}
+
+        public RespuestaModel(bool correcto, string resultado, PerfilModel perfil)
+        {
+            this.correcto = correcto;
+            this.resultado = resultado;
+            this.perfil = perfil;
+        }
+
+        public bool correcto { get; set; }
+        public string resultado { get; set; }
+        public PerfilModel perfil { get; set; }
     }
 }
